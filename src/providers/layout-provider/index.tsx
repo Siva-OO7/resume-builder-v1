@@ -84,7 +84,7 @@ function LayoutProvider({ children }: { children: React.ReactNode }) {
             className="text-xl font-bold text-white cursor-pointer"
             onClick={() => router.push("/")}
           >
-            SHEY-RESUMES
+            RESUME-BUILDER
           </h1>
           <div className="flex gap-5 items-center">
             {currentUserData?.isAdmin ? (
