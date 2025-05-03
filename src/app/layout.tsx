@@ -5,7 +5,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import LayoutProvider from "@/providers/layout-provider";
 
 export const metadata: Metadata = {
-  title: "Shey-Resumes - Dev",
+  title: "Resume Builder",
   description: "A modern resume builder for developers.",
 };
 
