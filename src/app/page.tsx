@@ -21,10 +21,11 @@ export default async function Home() {
 
       <div className="mt-5 grid grid-cols-5 gap-10">
         {data.map((template: ITemplate) => (
-          <Link key={template._id} href={`/template/${template._id}`}>
+          <Link key={template._id} href={`/template/${template._id}`} className="space-y-4">
             <div className="border border-gray-200 border-solid hover:border-gray-400">
               <img src={template.thumbnail} className="w-full h-96" />
             </div>
+            <p className="text-center">{template.name}</p>
           </Link>
         ))}
       </div>
