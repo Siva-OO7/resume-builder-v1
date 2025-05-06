@@ -1,11 +1,7 @@
 "use client";
 import React from "react";
-import { Form, Input, Button, Select, Space, Divider, Card } from "antd";
+import { Form, Input, Button, Space, Divider, Card } from "antd";
 import { MinusCircleOutlined, PlusOutlined } from "@ant-design/icons";
-
-const { Option } = Select;
-
-const proficiencyLevels = ["Beginner", "Intermediate", "Fluent", "Native"];
 
 function Languages() {
   return (
@@ -45,7 +41,7 @@ function Languages() {
                 name={[name, "language"]}
                 label="Language"
                 rules={[{ required: true, message: "Please enter language name" }]}
-                className="mb-6" // Added margin-bottom for spacing
+                className="mb-6"
               >
                 <Input placeholder="e.g., English, Spanish, Hindi" />
               </Form.Item>
@@ -53,46 +49,46 @@ function Languages() {
               <Form.Item
                 {...restField}
                 name={[name, "reading"]}
-                label="Reading Proficiency"
-                className="mb-6" // Added margin-bottom for spacing
+                label="Reading Proficiency (%)"
+                className="mb-6"
               >
-                <Select placeholder="Select level">
-                  {proficiencyLevels.map((level) => (
-                    <Option key={level} value={level}>
-                      {level}
-                    </Option>
-                  ))}
-                </Select>
+                <Input
+                  type="number"
+                  placeholder="Enter percentage (0-100)"
+                  min={0}
+                  max={100}
+                  suffix="%"
+                />
               </Form.Item>
 
               <Form.Item
                 {...restField}
                 name={[name, "writing"]}
-                label="Writing Proficiency"
-                className="mb-6" // Added margin-bottom for spacing
+                label="Writing Proficiency (%)"
+                className="mb-6"
               >
-                <Select placeholder="Select level">
-                  {proficiencyLevels.map((level) => (
-                    <Option key={level} value={level}>
-                      {level}
-                    </Option>
-                  ))}
-                </Select>
+                <Input
+                  type="number"
+                  placeholder="Enter percentage (0-100)"
+                  min={0}
+                  max={100}
+                  suffix="%"
+                />
               </Form.Item>
 
               <Form.Item
                 {...restField}
                 name={[name, "speaking"]}
-                label="Speaking Proficiency"
-                className="mb-6" // Added margin-bottom for spacing
+                label="Speaking Proficiency (%)"
+                className="mb-6"
               >
-                <Select placeholder="Select level">
-                  {proficiencyLevels.map((level) => (
-                    <Option key={level} value={level}>
-                      {level}
-                    </Option>
-                  ))}
-                </Select>
+                <Input
+                  type="number"
+                  placeholder="Enter percentage (0-100)"
+                  min={0}
+                  max={100}
+                  suffix="%"
+                />
               </Form.Item>
             </Card>
           ))}
@@ -117,3 +113,4 @@ function Languages() {
 }
 
 export default Languages;
+
