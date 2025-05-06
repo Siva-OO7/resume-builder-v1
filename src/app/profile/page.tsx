@@ -5,6 +5,13 @@ import Basic from "./_components/basic";
 import Experience from "./_components/experience";
 import Education from "./_components/education";
 import Skills from "./_components/skills";
+import Certificates from "./_components/certificates";
+import Languages from "./_components/languages";
+import Achievements from "./_components/achievements";
+import Projects from "./_components/projects";  
+
+
+
 import usersGlobalStore, { IUsersStore } from "@/store/users-store";
 import { updateUserProfile } from "@/server-actions/users";
 import UserSubscription from "./_components/user-subscription";
@@ -85,6 +92,19 @@ function ProfilePage() {
           <Tabs.TabPane tab="Experience" key="2">
             <Experience />
           </Tabs.TabPane>
+          <Tabs.TabPane tab="Certificates" key="5">
+            <Certificates />
+          </Tabs.TabPane>
+          <Tabs.TabPane tab="Languages" key="6">
+            <Languages />
+          </Tabs.TabPane>
+          <Tabs.TabPane tab="Achievements" key="7">
+            <Achievements />
+          </Tabs.TabPane>
+          <Tabs.TabPane tab="Projects" key="8">
+            <Projects />
+          </Tabs.TabPane>
+
         </Tabs>
 
         <div className="flex justify-end gap-10 mt-10">
